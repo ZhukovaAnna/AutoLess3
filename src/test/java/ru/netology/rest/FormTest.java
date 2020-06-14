@@ -2,23 +2,13 @@ package ru.netology.rest;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 import static org.openqa.selenium.By.cssSelector;
 
 public class FormTest {
-    @BeforeAll
-    static void setUpAll() {
-        System.setProperty("webdriver.chrome.driver", "C:\\tmp\\chromedriver.exe");
-    }
-
-    @AfterEach
-    void tearDown() {
-        closeWindow();
-    }
 
     @Test
     void shouldSubmitRequest() {
@@ -239,7 +229,7 @@ public class FormTest {
     }
 
     @Test
-    void shouldNotSubmitIfAgreementIsEmpty(){
+    void shouldNotSubmitIfAgreementIsEmpty() {
         open("http://localhost:9999");
         SelenideElement form = $("[action]");
         form.$(cssSelector("[data-test-id=name] input")).sendKeys("Иванова Анна");
