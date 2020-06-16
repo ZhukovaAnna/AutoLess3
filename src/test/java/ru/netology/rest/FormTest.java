@@ -40,7 +40,7 @@ public class FormTest {
         form.$(cssSelector("[data-test-id=phone] input")).sendKeys("+79103546789");
         form.$(cssSelector("[data-test-id=agreement]")).click();
         form.$(cssSelector("[role=button]")).click();
-        $("[data-test-id=order-success]").shouldHave(Condition.exactText("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
+        $(".input_type_text .input__sub").shouldHave(Condition.exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
     }
 
     @Test
@@ -51,7 +51,7 @@ public class FormTest {
         form.$(cssSelector("[data-test-id=phone] input")).sendKeys("+79103546789");
         form.$(cssSelector("[data-test-id=agreement]")).click();
         form.$(cssSelector("[role=button]")).click();
-        $("[data-test-id=order-success]").shouldHave(Condition.exactText("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
+        $(".input_type_text .input__sub").shouldHave(Condition.exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
     }
 
     @Test
@@ -84,7 +84,7 @@ public class FormTest {
         form.$(cssSelector("[data-test-id=phone] input")).sendKeys("+79103546789");
         form.$(cssSelector("[data-test-id=agreement]")).click();
         form.$(cssSelector("[role=button]")).click();
-        $("[data-test-id=order-success]").shouldHave(Condition.exactText("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
+        $(".input_type_text .input__sub").shouldHave(Condition.exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
     }
 
     @Test
